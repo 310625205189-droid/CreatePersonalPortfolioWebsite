@@ -1,0 +1,85 @@
+@import '@figma/astraui/styles.css';
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* ── Dot-grid page background ───────────────────────────────── */
+.bg-dot-grid {
+  background-image: radial-gradient(circle, var(--border-primary) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Gradient hero text ─────────────────────────────────────── */
+.text-gradient {
+  background: linear-gradient(135deg, var(--text-primary) 40%, var(--brand-primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Glowing orb (decorative background blobs) ──────────────── */
+.orb {
+  border-radius: 50%;
+  filter: blur(80px);
+  position: absolute;
+  pointer-events: none;
+}
+.orb-primary {
+  background: var(--brand-primary);
+  opacity: 0.12;
+}
+.orb-secondary {
+  background: var(--brand-secondary);
+  opacity: 0.08;
+}
+
+/* ── Animated orb float ─────────────────────────────────────── */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(-24px) scale(1.04); }
+}
+@keyframes float-slow-reverse {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50%       { transform: translateY(20px) scale(0.97); }
+}
+.animate-float       { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-rev   { animation: float-slow-reverse 10s ease-in-out infinite; }
+
+/* ── Glow card border on hover ──────────────────────────────── */
+.card-glow {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.card-glow:hover {
+  box-shadow: 0 0 0 1px var(--brand-primary), 0 0 20px 2px color-mix(in oklab, var(--brand-primary) 25%, transparent);
+  border-color: var(--brand-primary) !important;
+}
+
+/* ── Gradient section divider ───────────────────────────────── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--brand-primary), transparent);
+  opacity: 0.3;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* ── Glassmorphic navbar ────────────────────────────────────── */
+.nav-glass {
+  background: color-mix(in oklab, var(--surface-bg) 80%, transparent);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* ── Skill pill gradient ────────────────────────────────────── */
+.pill-gradient {
+  background: linear-gradient(135deg, var(--brand-tertiary), color-mix(in oklab, var(--brand-secondary) 20%, var(--brand-tertiary)));
+  border: 1px solid color-mix(in oklab, var(--brand-primary) 20%, transparent);
+}
+
+/* ── Scrollbar hide ─────────────────────────────────────────── */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }

@@ -1,0 +1,11 @@
+{
+  "title": "NavinRajaPortfolio",
+  "description": "Showcase professional background, skills, projects, and achievements with an interactive portfolio featuring resume download, contact form, and theme toggle.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
