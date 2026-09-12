@@ -1,0 +1,1 @@
+[{"id":"hardcoded-astra-ui","name":"Astra Demo Kit","npmScope":"@figma","npmPackageName":"astraui-kit","npmPackageVersion":"0.1.3","manifest":{"version":"0.1.3","kitType":"byoc","dependencies":{"@figma/astraui":"1.0.0"}}}]
